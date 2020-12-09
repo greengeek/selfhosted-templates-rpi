@@ -7,5 +7,5 @@ Minor changes made from the main project:
 * Changed YoutubeDL-Material to use ARM version
 * Set all PGUID and PGID to "1000" 
 * Standardized host bindings folders
-* Change all host folders to lowecase
+* Change all host folders to lowercase
 * Update images, replace missing images
