@@ -1,6 +1,6 @@
 # selfhosted-templates-rpi
 
-Just messing around with selfhosted_templates found at https://github.com/SelfhostedPro/selfhosted_templates to clean up and fix a few things to work with the Raspberry Pi 4 and Portainer 2.x.  Currently testing it out with Raspberry Pi OS lite 64bit.
+Just messing around with selfhosted_templates found at https://github.com/SelfhostedPro/selfhosted_templates to clean up and fix a few things to work with the Raspberry Pi 4 and Portainer 2.x.  Currently testing it out with Raspberry Pi OS lite 64bit beta.
 
 Minor changes made from the main project:
 * Updated Sonarr to ver v3
