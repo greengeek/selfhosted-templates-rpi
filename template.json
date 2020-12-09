@@ -281,7 +281,7 @@
 			"categories": [
 				"Music"
 			],
-			"description": null,
+			"description": "Headphones is an automated music downloader for NZB and Torrent, written in Python. It supports SABnzbd, NZBget, Transmission, µTorrent, Deluge and Blackhole.",
 			"env": [
 				{
 					"default": "1000",
@@ -459,7 +459,7 @@
 				"Downloaders",
 				"Tools"
 			],
-			"description": "Jackett works as a proxy server it translates queries from apps like Sonarr etc into tracker-site-specific http queries and parses the html response sending results back to the requesting software.[",
+			"description": "Jackett works as a proxy server it translates queries from apps like Sonarr etc into tracker-site-specific http queries and parses the html response sending results back to the requesting software.",
 			"env": [
 				{
 					"default": "1000",
@@ -1673,7 +1673,7 @@
 				"Cloud",
 				"Books"
 			],
-			"description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.\n\n  [br][br]\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\n  [b]/config[/b] Where Calibre-web should store it's database[br]\n  [b]/books[/b] Path to your calibre library metadata.db file[br]",
+			"description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.",
 			"env": [
 				{
 					"default": "1000",
@@ -2279,7 +2279,7 @@
 			"categories": [
 				"Other"
 			],
-			"description": "A free, self-hostable rss aggregator…",
+			"description": "A free, self-hostable rss aggregator.",
 			"env": [
 				{
 					"default": "1000",
@@ -3172,7 +3172,7 @@
 			"categories": [
 				"Management"
 			],
-			"description": null,
+			"description": "Smokeping allows you to probe a list of servers, store that data, and generate statistical charts based on the output. Smokeping consists of two parts. A daemon runs in the background pinging and collecting data at set intervals. A web interface displays that data in the form of graphs.",
 			"env": [
 				{
 					"default": "1000",
@@ -3260,7 +3260,7 @@
 				"Other",
 				"Tools"
 			],
-			"description": null,
+			"description": "Syncthing is a continuous file synchronization program. It synchronizes files between two or more computers in real time, safely protected from prying eyes.",
 			"env": [
 				{
 					"default": "1000",
@@ -3625,7 +3625,7 @@
 				"Management",
 				"Tools"
 			],
-			"description": null,
+			"description": "The UniFi Software-Defined Networking (SDN) platform is an end-to-end system of network devices across different locations — all controlled from a single interface.",
 			"env": [
 				{
 					"default": "1000",
@@ -3688,7 +3688,7 @@
 			"categories": [
 				"Downloaders"
 			],
-			"description": "WebGrab+Plus is a multi-site incremental xmltv epg grabber. It collects tv-program guide data from selected tvguide sites for your favourite channels.[br]\r\n\t\tOptional postprocessors to add IMDb data or to customize your xmltv listing.[br]\r\n\t\thttp://www.webgrabplus.com/[br]\r\n\t\t[b][span style='color: #E80000;']Directions:[/span][/b][br]\r\n\t\t[b]/config[/b] : This is where WebGrab+Plus will store it's configuration.[br][br]\r\n\t\t[b]/data[/b] : This is where tv_grab_wg script in the Tvheadend container looks for the guide.xml file.[br][br]",
+			"description": "WebGrab+Plus is a multi-site incremental xmltv epg grabber. It collects tv-program guide data from selected tvguide sites for your favourite channels.[br]\r\n\t\tOptional postprocessors to add IMDb data or to customize your xmltv listing.",
 			"env": [
 				{
 					"default": "1000",
