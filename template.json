@@ -3550,7 +3550,7 @@
 				}
 			],
 			"image": "linuxserver/tvheadend:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/zGSUAT4.png",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/tvheadend.png",
 			"name": "tvheadend",
 			"platform": "linux",
 			"ports": [
