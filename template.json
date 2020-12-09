@@ -987,7 +987,7 @@
 				}
 			],
 			"image": "goofball222/murmur:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/Mumble-logo.png",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/mumble-logo.png",
 			"name": "murmur",
 			"platform": "linux",
 			"ports": [
@@ -1591,7 +1591,7 @@
 				"Tools",
 				"Photo"
 			],
-			"description": "Chevereto is a powerful and fast image hosting script that allows you to create your very own full featured image hosting website in just minutes. Please note that this offers only the free Chevereto version..",
+			"description": "Chevereto is a powerful and fast image hosting script that allows you to create your very own full featured image hosting website in just minutes. Please note that this offers only the free Chevereto version.",
 			"env": [
 				{
 					"default": "1000",
@@ -1630,7 +1630,7 @@
 				}
 			],
 			"image": "nmtan/chevereto:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/Chevereto.png",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/chevereto.png",
 			"name": "Chevereto",
 			"platform": "linux",
 			"ports": [
@@ -2094,7 +2094,7 @@
 				}
 			],
 			"image": "linuxserver/domoticz:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/logo.png",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/domoticz.png",
 			"name": "domoticz",
 			"platform": "linux",
 			"ports": [
@@ -3301,7 +3301,7 @@
 				"Other",
 				"Tools"
 			],
-			"description": "Tautulli is a 3rd party application that you can run along side your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched. All statistics are presented in a nice and clean interface with many tables and graphs, which makes it easy to brag about your server to everyone else.[br][br]\r\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\r\n  [b]8181[/b] The webui for Tautulli's webui [br]\r\n  [b]/config[/b] Storing Configuration and the Tautulli database[br]\r\n[b]/logs[/b] Map to you plex logs (required for IP logging)[br]\r\n\r\n",
+			"description": "Tautulli is a 3rd party application that you can run along side your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched. All statistics are presented in a nice and clean interface with many tables and graphs, which makes it easy to brag about your server to everyone else.",
 			"env": [
 				{
 					"default": "1000",
