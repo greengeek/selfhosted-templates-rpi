@@ -1459,7 +1459,7 @@
 				}
 			],
 			"image": "linuxserver/oscam:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/8LadrLg.png",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/oscam.png",
 			"name": "oscam",
 			"platform": "linux",
 			"ports": [
