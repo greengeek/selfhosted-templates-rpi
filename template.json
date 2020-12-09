@@ -3836,7 +3836,7 @@
 				}
 			],
 			"image": "pducharme/unifi-video-controller:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/UniFiVideo-logo.png",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/unifivideo.png",
 			"name": "UniFi Video",
 			"platform": "linux",
 			"ports": [
@@ -3871,7 +3871,7 @@
 			],
 			"description": "A web interface for managing docker containers with an emphasis on templating to provide 1 click deployments. Think of it like a decentralized app store for servers that anyone can make packages for.",
 			"image": "selfhostedpro/yacht:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images//Yacht_logo_1_dark.png",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/yacht.png",
 			"name": "yacht",
 			"platform": "linux",
 			"ports": [
@@ -3959,6 +3959,7 @@
 				}
 			],
 			"image": "sgtsquiggs/deluge-openvpn:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/deluge-openvpn.png",
 			"name": "deluge-openvpn",
 			"platform": "linux",
 			"ports": [
