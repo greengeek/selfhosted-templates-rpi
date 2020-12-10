@@ -40,23 +40,23 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/appdata/airsonic/music",
+					"bind": "/mnt/data/music",
 					"container": "/music"
 				},
 				{
-					"bind": "/mnt/data/appdata/airsonic/playlists",
+					"bind": "/mnt/data/playlists",
 					"container": "/playlists"
 				},
 				{
-					"bind": "/mnt/data/appdata/airsonic/podcasts",
+					"bind": "/mnt/data/podcasts",
 					"container": "/podcasts"
 				},
 				{
-					"bind": "/mnt/data/appdata/airsonic/media",
+					"bind": "/mnt/data/media",
 					"container": "/media"
 				},
 				{
-					"bind": "/mnt/data/config/airsonic",
+					"bind": "/mnt/data/appdata/airsonic/config",
 					"container": "/config"
 				}
 			]
@@ -87,7 +87,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/authelia",
+					"bind": "/mnt/data/appdata/authelia/config",
 					"container": "/etc/authelia/"
 				}
 			]
@@ -126,15 +126,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/bazarr",
+					"bind": "/mnt/data/appdata/bazarr/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/bazarr/tv",
+					"bind": "/mnt/data/tv",
 					"container": "/tv"
 				},
 				{
-					"bind": "/mnt/data/appdata/bazarr/movies",
+					"bind": "/mnt/data/movies",
 					"container": "/movies"
 				}
 			]
@@ -168,15 +168,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/beets",
+					"bind": "/mnt/data/appdata/beets/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/beets/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/mnt/data/appdata/beets/music",
+					"bind": "/mnt/data/music",
 					"container": "/music"
 				}
 			]
@@ -200,7 +200,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/bitwarden-rs",
+					"bind": "/mnt/data/appdata/bitwarden-rs/config",
 					"container": "/config"
 				}
 			]
@@ -240,15 +240,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/appdata/booksonic/books",
+					"bind": "/mnt/data/books",
 					"container": "/books"
 				},
 				{
-					"bind": "/mnt/data/appdata/booksonic/podcasts",
+					"bind": "/mnt/data/podcasts",
 					"container": "/podcast"
 				},
 				{
-					"bind": "/mnt/data/config/booksonic",
+					"bind": "/mnt/data/appdata/booksonic/config",
 					"container": "/config"
 				}
 			]
@@ -272,7 +272,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/embystat",
+					"bind": "/mnt/data/appdata/embystat/config",
 					"container": "/config"
 				}
 			]
@@ -306,15 +306,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/headphones",
+					"bind": "/mnt/data/appdata/headphones/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/Downloads"
 				},
 				{
-					"bind": "/mnt/data/appdata/music",
+					"bind": "/mnt/data/music",
 					"container": "/music"
 				}
 			]
@@ -351,7 +351,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/heimdall",
+					"bind": "/mnt/data/appdata/heimdall/config",
 					"container": "/config"
 				}
 			]
@@ -375,11 +375,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/homer/assets",
+					"bind": "/mnt/data/appdata/homer/assets",
 					"container": "/www/assets"
 				},
 				{
-					"bind": "/mnt/data/config/homer",
+					"bind": "/mnt/data/appdata/homer/config",
 					"container": "/www/config.yml"
 				}
 			]
@@ -402,7 +402,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/huginn",
+					"bind": "/mnt/data/appdata/huginn/config",
 					"container": "/var/lib/mysql"
 				}
 			]
@@ -484,11 +484,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/jackett",
+					"bind": "/mnt/data/appdata/jackett/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/jackett/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -529,15 +529,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/jelllyfin",
+					"bind": "/mnt/data/appdata/jelllyfin/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/jelllyfin/tv",
+					"bind": "/mnt/data/tv",
 					"container": "/data/tvshows"
 				},
 				{
-					"bind": "/mnt/data/appdata/jelllyfin/movies",
+					"bind": "/mnt/data/movies",
 					"container": "/data/movies"
 				}
 			]
@@ -572,7 +572,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/kodi",
+					"bind": "/mnt/data/appdata/kodi/config",
 					"container": "/config"
 				}
 			]
@@ -606,15 +606,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/lazylibrarian",
+					"bind": "/mnt/data/appdata/lazylibrarian/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/lazylibrarian/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/mnt/data/appdata/lazylibrarian/books",
+					"bind": "/mnt/data/books",
 					"container": "/books"
 				}
 			]
@@ -685,7 +685,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/letsencrypt",
+					"bind": "/mnt/data/appdata/letsencrypt/config",
 					"container": "/config"
 				}
 			]
@@ -708,7 +708,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/librespeed",
+					"bind": "/mnt/data/appdata/librespeed/config",
 					"container": "/config"
 				}
 			]
@@ -745,11 +745,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/lychee",
+					"bind": "/mnt/data/appdata/lychee/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/lychee/pictures",
+					"bind": "/mnt/data/pictures",
 					"container": "/pictures"
 				}
 			]
@@ -789,7 +789,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/mariadb",
+					"bind": "/mnt/data/appdata/mariadb/config",
 					"container": "/config"
 				}
 			]
@@ -858,15 +858,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/medusa",
+					"bind": "/mnt/data/appdata/medusa/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/medusa/tv",
+					"bind": "/mnt/data/tv",
 					"container": "/tv"
 				},
 				{
-					"bind": "/mnt/data/appdata/medusa/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -954,11 +954,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/mstream",
+					"bind": "/mnt/data/appdata/mstream/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/mstream/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/music"
 				}
 			]
@@ -1003,7 +1003,7 @@
 					"container": "/etc/localtime"
 				},
 				{
-					"bind": "/mnt/data/config/murmur",
+					"bind": "/mnt/data/appdata/murmur/config",
 					"container": "/opt/murmur/config"
 				},
 				{
@@ -1052,7 +1052,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/musicbrainz",
+					"bind": "/mnt/data/appdata/musicbrainz/config",
 					"container": "/config"
 				},
 				{
@@ -1093,7 +1093,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/muximux",
+					"bind": "/mnt/data/appdata/muximux/config",
 					"container": "/config"
 				}
 			]
@@ -1128,15 +1128,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/mylar",
+					"bind": "/mnt/data/appdata/mylar/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/mylar/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/mnt/data/appdata/mylar/comics",
+					"bind": "/mnt/data/comics",
 					"container": "/comics"
 				}
 			]
@@ -1220,7 +1220,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/nginx",
+					"bind": "/mnt/data/appdata/nginx/config",
 					"container": "/config"
 				}
 			]
@@ -1245,7 +1245,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/nginx-proxy",
+					"bind": "/mnt/data/appdata/nginx-proxy/config",
 					"container": "/config"
 				}
 			]
@@ -1279,11 +1279,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/nzbget",
+					"bind": "/mnt/data/appdata/nzbget/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/nzbget/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -1319,11 +1319,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/nzbhydra2",
+					"bind": "/mnt/data/appdata/nzbhydra2/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/nzbhydra2/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -1360,7 +1360,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/ombi",
+					"bind": "/mnt/data/appdata/ombi/config",
 					"container": "/config"
 				}
 			]
@@ -1401,7 +1401,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/openvpn-as",
+					"bind": "/mnt/data/appdata/openvpn-as/config",
 					"container": "/config"
 				}
 			]
@@ -1436,7 +1436,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/organizr",
+					"bind": "/mnt/data/appdata/organizr/config",
 					"container": "/config"
 				}
 			]
@@ -1471,7 +1471,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/oscam",
+					"bind": "/mnt/data/appdata/oscam/config",
 					"container": "/config"
 				}
 			]
@@ -1505,7 +1505,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/appdata/photoshow/pictures",
+					"bind": "/mnt/data/pictures",
 					"container": "/Pictures"
 				},
 				{
@@ -1513,7 +1513,7 @@
 					"container": "/Thumbs"
 				},
 				{
-					"bind": "/mnt/data/config/photoshow",
+					"bind": "/mnt/data/appdata/photoshow/config",
 					"container": "/config"
 				}
 			]
@@ -1537,7 +1537,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/snibox",
+					"bind": "/mnt/data/appdata/snibox/config",
 					"container": "/app/db/database"
 				}
 			]
@@ -1663,7 +1663,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/chowdown",
+					"bind": "/mnt/data/appdata/chowdown/config",
 					"container": "/config"
 				}
 			]
@@ -1698,11 +1698,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/appdata/calibre-web/books",
+					"bind": "/mnt/data/books",
 					"container": "/books"
 				},
 				{
-					"bind": "/mnt/data/config/calibre-web",
+					"bind": "/mnt/data/appdata/calibre-web/config",
 					"container": "/config"
 				}
 			]
@@ -1736,7 +1736,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/cardigann",
+					"bind": "/mnt/data/appdata/cardigann/config",
 					"container": "/config"
 				}
 			]
@@ -1788,7 +1788,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/code-server",
+					"bind": "/mnt/data/appdata/code-server/config",
 					"container": "/config"
 				}
 			]
@@ -1822,7 +1822,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/codiad",
+					"bind": "/mnt/data/appdata/codiad/config",
 					"container": "/config"
 				}
 			]
@@ -1857,11 +1857,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/appdata/cops/books",
+					"bind": "/mnt/data/books",
 					"container": "/books"
 				},
 				{
-					"bind": "/mnt/data/config/cops",
+					"bind": "/mnt/data/appdata/cops/config",
 					"container": "/config"
 				}
 			]
@@ -1896,15 +1896,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/couchpotato",
+					"bind": "/mnt/data/appdata/couchpotato/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/couchpotato/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/mnt/data/appdata/couchpotato/movies",
+					"bind": "/mnt/data/movies",
 					"container": "/movies"
 				}
 			]
@@ -1935,11 +1935,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/daapd",
+					"bind": "/mnt/data/appdata/daapd/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/daapd/music",
+					"bind": "/mnt/data/music",
 					"container": "/music"
 				}
 			]
@@ -1962,7 +1962,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/dashmachine",
+					"bind": "/mnt/data/appdata/dashmachine/config",
 					"container": "/dashmachine/dashmachine/user_data"
 				}
 			]
@@ -1998,11 +1998,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/davos",
+					"bind": "/mnt/data/appdata/davos/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/davos/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -2026,11 +2026,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/deemix",
+					"bind": "/mnt/data/appdata/deemix/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/deemix/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -2066,11 +2066,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/deluge",
+					"bind": "/mnt/data/appdata/deluge/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/deluge/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -2107,7 +2107,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/domoticz",
+					"bind": "/mnt/data/appdata/domoticz/config",
 					"container": "/config"
 				}
 			]
@@ -2181,7 +2181,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/duplicati",
+					"bind": "/mnt/data/appdata/duplicati/config",
 					"container": "/config"
 				},
 				{
@@ -2234,15 +2234,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/emby",
+					"bind": "/mnt/data/appdata/emby/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/emby/tv",
+					"bind": "/mnt/data/tv",
 					"container": "/data/tvshows"
 				},
 				{
-					"bind": "/mnt/data/appdata/emby/movies",
+					"bind": "/mnt/data/movies",
 					"container": "/data/movies"
 				}
 			]
@@ -2266,11 +2266,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/filebrowser",
+					"bind": "/mnt/data/appdata/filebrowser/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/filebrowser/myfiles",
+					"bind": "/mnt/data/myfiles",
 					"container": "/myfiles"
 				}
 			]
@@ -2304,7 +2304,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/freshrss",
+					"bind": "/mnt/data/appdata/freshrss/config",
 					"container": "/config"
 				}
 			]
@@ -2337,11 +2337,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/gazee",
+					"bind": "/mnt/data/appdata/gazee/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/gazee/comics",
+					"bind": "/mnt/data/comics",
 					"container": "/comics"
 				},
 				{
@@ -2385,7 +2385,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/grocy",
+					"bind": "/mnt/data/appdata/grocy/config",
 					"container": "/config"
 				}
 			]
@@ -2409,7 +2409,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/guacamole",
+					"bind": "/mnt/data/appdata/guacamole/config",
 					"container": "/config"
 				}
 			]
@@ -2445,7 +2445,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/htpcmanager",
+					"bind": "/mnt/data/appdata/htpcmanager/config",
 					"container": "/config"
 				}
 			]
@@ -2480,15 +2480,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/lidarr",
+					"bind": "/mnt/data/appdata/lidarr/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/lidarr/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/mnt/data/appdata/lidarr/music",
+					"bind": "/mnt/data/music",
 					"container": "/music"
 				}
 			]
@@ -2516,11 +2516,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/pihole",
+					"bind": "/mnt/data/appdata/pihole/config",
 					"container": "/etc/pihole"
 				},
 				{
-					"bind": "/mnt/data/config/pihole/dns",
+					"bind": "/mnt/data/appdata/pihole/dns",
 					"container": "/etc/dnsmasq.d"
 				}
 			]
@@ -2554,7 +2554,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/piwigo",
+					"bind": "/mnt/data/appdata/piwigo/config",
 					"container": "/config"
 				}
 			]
@@ -2593,15 +2593,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/plex",
+					"bind": "/mnt/data/appdata/plex/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/plex/tv",
+					"bind": "/mnt/data/tv",
 					"container": "/tv"
 				},
 				{
-					"bind": "/mnt/data/appdata/plex/movies",
+					"bind": "/mnt/data/movies",
 					"container": "/movies"
 				}
 			]
@@ -2643,7 +2643,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/plexrequests",
+					"bind": "/mnt/data/appdata/plexrequests/config",
 					"container": "/config"
 				}
 			]
@@ -2684,7 +2684,7 @@
 					"container": "/data"
 				},
 				{
-					"bind": "/mnt/data/config/projectsend",
+					"bind": "/mnt/data/appdata/projectsend/config",
 					"container": "/config"
 				}
 			]
@@ -2786,7 +2786,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/pydio",
+					"bind": "/mnt/data/appdata/pydio/config",
 					"container": "/config"
 				},
 				{
@@ -2826,11 +2826,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/qbittorrent",
+					"bind": "/mnt/data/appdata/qbittorrent/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/qbittorrent/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -2864,7 +2864,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/quassel-core",
+					"bind": "/mnt/data/appdata/quassel-core/config",
 					"container": "/config"
 				}
 			]
@@ -2899,15 +2899,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/radarr",
+					"bind": "/mnt/data/appdata/radarr/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/radarr/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/mnt/data/appdata/radarr/movies",
+					"bind": "/mnt/data/movies",
 					"container": "/movies"
 				}
 			]
@@ -2930,7 +2930,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/reactiveresume",
+					"bind": "/mnt/data/appdata/reactiveresume/config",
 					"container": "/usr/src/app"
 				}
 			]
@@ -2964,14 +2964,14 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/resilio-sync",
+					"bind": "/mnt/data/appdata/resilio-sync/config",
 					"container": "/config"
 				},
 				{
 					"container": "/sync"
 				},
 				{
-					"bind": "/mnt/data/appdata/resilio-sync/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -3007,11 +3007,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/rutorrent",
+					"bind": "/mnt/data/appdata/rutorrent/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/rutorrent/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -3046,15 +3046,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/sabnzbd",
+					"bind": "/mnt/data/appdata/sabnzbd/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/sabnzbd/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/mnt/data/appdata/sabnzbd/downloads/incomplete",
+					"bind": "/mnt/data/downloads/incomplete",
 					"container": "/incomplete-downloads"
 				}
 			]
@@ -3077,7 +3077,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/shiori",
+					"bind": "/mnt/data/appdata/shiori/config",
 					"container": "/srv/shiori"
 				}
 			]
@@ -3112,15 +3112,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/sickchill",
+					"bind": "/mnt/data/appdata/sickchill/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/sickchill/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/mnt/data/appdata/sickchill/tv",
+					"bind": "/mnt/data/tv",
 					"container": "/tv"
 				}
 			]
@@ -3155,15 +3155,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/sickgear",
+					"bind": "/mnt/data/appdata/sickgear/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/sickgear/tv",
+					"bind": "/mnt/data/tv",
 					"container": "/tv"
 				},
 				{
-					"bind": "/mnt/data/appdata/sickgear/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -3197,7 +3197,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/smokeping",
+					"bind": "/mnt/data/appdata/smokeping/config",
 					"container": "/config"
 				},
 				{
@@ -3236,7 +3236,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/sonarr",
+					"bind": "/mnt/data/appdata/sonarr/config",
 					"container": "/config"
 				},
 				{
@@ -3244,11 +3244,11 @@
 					"container": "/dev/rtc"
 				},
 				{
-					"bind": "/mnt/data/appdata/sonarr/tv",
+					"bind": "/mnt/data/tv",
 					"container": "/tv"
 				},
 				{
-					"bind": "/mnt/data/appdata/sonarr/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -3287,11 +3287,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/syncthing",
+					"bind": "/mnt/data/appdata/syncthing/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/syncthing/sync",
+					"bind": "/mnt/data/sync",
 					"container": "/sync"
 				}
 			]
@@ -3330,7 +3330,7 @@
 					"container": "/logs"
 				},
 				{
-					"bind": "/mnt/data/config/tautulli",
+					"bind": "/mnt/data/appdata/tautulli/config",
 					"container": "/config"
 				}
 			]
@@ -3364,7 +3364,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/thelounge",
+					"bind": "/mnt/data/appdata/thelounge/config",
 					"container": "/config"
 				}
 			]
@@ -3387,7 +3387,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/tiddlywiki",
+					"bind": "/mnt/data/appdata/tiddlywiki/config",
 					"container": "/var/lib/tiddlywiki"
 				}
 			]
@@ -3422,11 +3422,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/transmission",
+					"bind": "/mnt/data/appdata/transmission/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/transmission/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				},
 				{
@@ -3488,7 +3488,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/appdata/transmission-openvpn/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/data"
 				},
 				{
@@ -3526,7 +3526,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/tt-rss",
+					"bind": "/mnt/data/appdata/tt-rss/config",
 					"container": "/config"
 				}
 			]
@@ -3562,11 +3562,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/tvheadend",
+					"bind": "/mnt/data/appdata/tvheadend/config",
 					"container": "/config"
 				},
 				{
-					"bind": "/mnt/data/appdata/tvheadend/recordings",
+					"bind": "/mnt/data/recordings",
 					"container": "/recordings"
 				}
 			]
@@ -3607,15 +3607,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/appdata/ubooquity/books",
+					"bind": "/mnt/data/books",
 					"container": "/books"
 				},
 				{
-					"bind": "/mnt/data/appdata/ubooquity/comics",
+					"bind": "/mnt/data/comics",
 					"container": "/comics"
 				},
 				{
-					"bind": "/mnt/data/config/ubooquity",
+					"bind": "/mnt/data/appdata/ubooquity/config",
 					"container": "/config"
 				}
 			]
@@ -3657,7 +3657,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/unifi",
+					"bind": "/mnt/data/appdata/unifi/config",
 					"container": "/config"
 				}
 			]
@@ -3710,7 +3710,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/webgrabplus",
+					"bind": "/mnt/data/appdata/webgrabplus/config",
 					"container": "/config"
 				},
 				{
@@ -3737,7 +3737,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/whoogle",
+					"bind": "/mnt/data/appdata/whoogle/config",
 					"container": "/config"
 				}
 			]
@@ -3760,7 +3760,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/wikijs",
+					"bind": "/mnt/data/appdata/wikijs/config",
 					"container": "/config"
 				},
 				{
@@ -3787,23 +3787,23 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/youtubedl",
+					"bind": "/mnt/data/appdata/youtubedl/config",
 					"container": "/app/appdata"
 				},
 				{
-					"bind": "/mnt/data/appdata/youtubedl/video",
+					"bind": "/mnt/data/youtube/video",
 					"container": "/app/video"
 				},
 				{
-					"bind": "/mnt/data/appdata/youtubedl/subscriptions",
+					"bind": "/mnt/data/youtube/subscriptions",
 					"container": "/app/subscriptions"
 				},
 				{
-					"bind": "/mnt/data/appdata/youtubedl/users",
+					"bind": "/mnt/data/youtube/users",
 					"container": "/app/users"
 				},
 				{
-					"bind": "/mnt/data/appdata/youtubedl/audio",
+					"bind": "/mnt/data/youtube/audio",
 					"container": "/app/audio"
 				}
 			]
@@ -3855,11 +3855,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/appdata/unifivideo/recordings/",
+					"bind": "/mnt/data/recordings",
 					"container": "/recordings"
 				},
 				{
-					"bind": "/mnt/data/config/unifivideo/",
+					"bind": "/mnt/data/appdata/unifivideo/config",
 					"container": "/config"
 				}
 			]
@@ -3882,7 +3882,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/yacht",
+					"bind": "/mnt/data/appdata/yacht/config",
 					"container": "/config"
 				},
 				{
@@ -3920,7 +3920,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/mnt/data/config/znc",
+					"bind": "/mnt/data/appdata/znc/config",
 					"container": "/config"
 				}
 			]
@@ -3974,11 +3974,11 @@
 					"container": "/etc/localtime"
 				},
 				{
-					"bind": "/mnt/data/appdata/delugeopenvpn/downloads",
+					"bind": "/mnt/data/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/mnt/data/config/delugeopenvpn",
+					"bind": "/mnt/data/appdata/delugeopenvpn/config",
 					"container": "/config"
 				}
 			]
