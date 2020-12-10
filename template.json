@@ -255,6 +255,785 @@
 		},
 		{
 			"categories": [
+				"Wiki"
+			],
+			"description": "Bookstack is a free and open source Wiki designed for creating beautiful documentation. Feautring a simple, but powerful WYSIWYG editor it allows for teams to create detailed and useful documentation with ease.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ"
+				},
+				{
+					"label": "DATABASE_PASSWORD",
+					"name": "DATABASE_PASSWORD"
+				},
+				{
+					"label": "MYSQL_ROOT_PASSWORD",
+					"name": "MYSQL_ROOT_PASSWORD"
+				},
+				{
+					"label": "PORT",
+					"name": "PORT"
+				}
+			],
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/bookstack2.png",
+			"note": "Default login is admin@admin.com with a password of password. The database created is called bookstackapp and the database user is called bookstack",
+			"platform": "linux",
+			"repository": {
+				"stackfile": "Template/Stack/bookstack.yml",
+				"url": "https://github.com/SelfhostedPro/selfhosted_templates"
+			},
+			"title": "Bookstack",
+			"type": 3
+		},
+		{
+			"categories": [
+				"Other",
+				"Tools",
+				"Photo"
+			],
+			"description": "Chevereto is a powerful and fast image hosting script that allows you to create your very own full featured image hosting website in just minutes. Please note that this offers only the free Chevereto version.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"label": "CHEVERETO_DB_HOST",
+					"name": "CHEVERETO_DB_HOST",
+					"set": ""
+				},
+				{
+					"label": "CHEVERETO_DB_USERNAME",
+					"name": "CHEVERETO_DB_USERNAME",
+					"set": ""
+				},
+				{
+					"label": "CHEVERETO_DB_PASSWORD",
+					"name": "CHEVERETO_DB_PASSWORD",
+					"set": ""
+				},
+				{
+					"label": "CHEVERETO_DB_NAME",
+					"name": "CHEVERETO_DB_NAME",
+					"set": ""
+				},
+				{
+					"label": "CHEVERETO_DB_PREFIX",
+					"name": "CHEVERETO_DB_PREFIX",
+					"set": ""
+				}
+			],
+			"image": "nmtan/chevereto:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/chevereto.png",
+			"name": "Chevereto",
+			"platform": "linux",
+			"ports": [
+				"80/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Chevereto",
+			"type": 1,
+			"volumes": [
+				{
+					"container": "/var/www/html/images"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Other",
+				"Tools"
+			],
+			"description": "Save recipes in seconds with plain text formatting and create beatiful recipe pages with automated ease.",
+			"image": "gregyankovoy/chowdown:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/chowdown.png",
+			"name": "Chowdown",
+			"platform": "linux",
+			"ports": [
+				"4000:4000/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Chowdown",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/chowdown/config",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Cloud",
+				"Books"
+			],
+			"description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "linuxserver/calibre-web:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/calibre-web-icon.png",
+			"name": "calibre-web",
+			"platform": "linux",
+			"ports": [
+				"8083:8083/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Calibre Web",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/books",
+					"container": "/books"
+				},
+				{
+					"bind": "/mnt/data/appdata/calibre-web/config",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Downloaders"
+			],
+			"description": "Cardigann, a server for adding extra indexers to Sonarr, SickRage and CouchPotato via Torznab and TorrentPotato proxies. Behind the scenes Cardigann logs in and runs searches and then transforms the results into a compatible format.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "linuxserver/cardigann:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/cardigann.png",
+			"name": "cardigann",
+			"platform": "linux",
+			"ports": [
+				"5060:5060/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Cardigann",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/cardigann/config",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Other",
+				"Tools"
+			],
+			"description": "Code-server is VS Code running on a remote server, accessible through the browser.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "GUID"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ"
+				},
+				{
+					"label": "PASSWORD",
+					"name": "PASSWORD"
+				},
+				{
+					"label": "SUDO_PASSWORD",
+					"name": "SUDO_PASSWORD"
+				},
+				{
+					"default": "example.my.domain",
+					"label": "PROXY_DOMAIN",
+					"name": "PROXY_DOMAIN"
+				}
+			],
+			"image": "linuxserver/code-server:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/code-server.png",
+			"name": "code-server",
+			"platform": "linux",
+			"ports": [
+				"8443:8443/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Code Server",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/code-server/config",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Productivity"
+			],
+			"description": "Codiad is a web-based IDE framework with a small footprint and minimal requirements.\n  ",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "linuxserver/codiad:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/codiad-icon.png",
+			"name": "codiad",
+			"platform": "linux",
+			"ports": [
+				"80/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Codiad",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/codiad/config",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Cloud",
+				"Books"
+			],
+			"description": "COPS links to your Calibre library database and allows downloading and emailing of books directly from a web browser and provides a OPDS feed to connect to your devices.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "linuxserver/cops:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/cops-icon.png",
+			"name": "cops",
+			"platform": "linux",
+			"ports": [
+				"80/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "COPS",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/books",
+					"container": "/books"
+				},
+				{
+					"bind": "/mnt/data/appdata/cops/config",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Downloaders",
+				"Video"
+			],
+			"description": "CouchPotato (CP) is an automatic NZB and torrent downloader. You can keep a \"movies I want\"-list and it will search for NZBs/torrents of these movies every X hours. Once a movie is found, it will send it to SABnzbd or download the torrent to a specified directory.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "linuxserver/couchpotato:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/couchpotato-icon.png",
+			"name": "couchpotato",
+			"platform": "linux",
+			"ports": [
+				"5050:5050/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "CouchPotato",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/couchpotato/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/mnt/data/downloads",
+					"container": "/downloads"
+				},
+				{
+					"bind": "/mnt/data/movies",
+					"container": "/movies"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Music"
+			],
+			"description": "DAAP (iTunes) media server with support for AirPlay devices, Apple Remote (and compatibles), MPD and internet radio.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "linuxserver/daapd:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/daapd-icon.png",
+			"name": "daapd",
+			"platform": "linux",
+			"restart_policy": "unless-stopped",
+			"title": "Daapd",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/daapd/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/mnt/data/music",
+					"container": "/music"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Other",
+				"Tools"
+			],
+			"description": "Another application bookmark dashboard, with fun features.",
+			"image": "rmountjoy/dashmachine:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/dashmachine_logo.png",
+			"name": "dashmachine",
+			"platform": "linux",
+			"ports": [
+				"5000:5000/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "DashMachine",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/dashmachine/config",
+					"container": "/dashmachine/dashmachine/user_data"
+				}
+			]
+		},
+		{
+			"categories": [
+				"FTP",
+				"Other",
+				"Tools"
+			],
+			"description": "davos is an FTP automation tool that periodically scans given host locations for new files. It can be configured for various purposes, including listening for specific files to appear in the host location, ready for it to download and then move, if required. It also supports completion notifications as well as downstream API calls, to further the workflow.\r\n\r\n/config : AppData Location\r\n/download : File Download Location",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "linuxserver/davos:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/davos.png",
+			"name": "davos",
+			"platform": "linux",
+			"ports": [
+				"8080/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Davos",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/davos/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/mnt/data/downloads",
+					"container": "/downloads"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Other",
+				"Music"
+			],
+			"description": "Deemix is a deezer downloader built from the ashes of Deezloader Remix.",
+			"image": "registry.gitlab.com/bockiii/deemix-docker",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/deemix.png",
+			"name": "deemix",
+			"note": "Deemix may take a few minutes to install. Be sure to check the logs for details. Refer to \u003ca href='https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken'\u003ethis page\u003c/a\u003e for userToken details.",
+			"platform": "linux",
+			"ports": [
+				"9666:9666/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "DeeMix",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/deemix/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/mnt/data/downloads",
+					"container": "/downloads"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Downloaders"
+			],
+			"description": "Deluge is a lightweight, Free Software, cross-platform BitTorrent client providing: Full Encryption, WebUI, Plugin System, Much more...",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"label": "UMASK_SET",
+					"name": "UMASK_SET",
+					"set": "000"
+				}
+			],
+			"image": "linuxserver/deluge:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/deluge-icon.png",
+			"namme": "deluge",
+			"platform": "linux",
+			"restart_policy": "unless-stopped",
+			"title": "Deluge",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/deluge/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/mnt/data/downloads",
+					"container": "/downloads"
+				}
+			]
+		},
+		{
+			"categories": [
+				"HomeAutomation",
+				"Management"
+			],
+			"description": "Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "linuxserver/domoticz:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/domoticz.png",
+			"name": "domoticz",
+			"platform": "linux",
+			"ports": [
+				"1443:1443/tcp",
+				"6144:6144/tcp",
+				"8080:8080/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Domoticz",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/domoticz/config",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
+				"DNS",
+				"Tools"
+			],
+			"description": "Duck DNS is a free service which will point a DNS (sub domains of duckdns.org) to an IP of your choice. The service is completely free, and doesn't require reactivation or forum posts to maintain its existence.\r\n\r\nFirst, go to duckdns site, register your subdomain and retrieve your token\r\nThen run the docker create command above with your subdomain(s) and token\r\nIt will update your IP with the DuckDNS service every 5 minutes\r\n\r\n",
+			"env": [
+				{
+					"label": "SUBDOMAINS",
+					"name": "SUBDOMAINS",
+					"set": ""
+				},
+				{
+					"label": "TOKEN",
+					"name": "TOKEN",
+					"set": ""
+				},
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "linuxserver/duckdns:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/duckdns.png",
+			"name": "duckdns",
+			"platform": "linux",
+			"restart_policy": "unless-stopped",
+			"title": "Duck DNS",
+			"type": 1
+		},
+		{
+			"categories": [
+				"Backup",
+				"Cloud",
+				"Other",
+				"Productivity",
+				"Tools"
+			],
+			"description": "Free backup software to store encrypted backups online, Duplicati works with standard protocols like FTP, SSH, WebDAV as well as popular services like Microsoft OneDrive, Amazon Cloud Drive and S3, Google Drive, box.com, Mega, hubiC and many others.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "linuxserver/duplicati:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/duplicati-icon.png",
+			"name": "duplicati",
+			"platform": "linux",
+			"ports": [
+				"8200:8200/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Duplicati",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/duplicati/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/mnt/data/appdata/duplicati/tmp",
+					"container": "/tmp"
+				},
+				{
+					"bind": "/mnt/data/appdata/duplicati/backups",
+					"container": "/backups"
+				},
+				{
+					"bind": "/mnt/data/appdata/duplicati/source",
+					"container": "/source"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Video",
+				"Music",
+				"Photos"
+			],
+			"description": "Emby organizes video, music, live TV, and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone emby Media Server.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ"
+				}
+			],
+			"image": "linuxserver/emby:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/emby.png",
+			"name": "emby",
+			"platform": "linux",
+			"ports": [
+				"8096:8096/tcp",
+				"8920:8920/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Emby",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/emby/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/mnt/data/tv",
+					"container": "/data/tvshows"
+				},
+				{
+					"bind": "/mnt/data/movies",
+					"container": "/data/movies"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Security"
+			],
+			"description": "Dradis Framework: Collaboration and reporting for IT Security teams http://dradisframework.org",
+			"image": "raesene/dradis:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/dradis-logo.png",
+			"name": "dradis",
+			"platform": "linux",
+			"ports": [
+				"3000:3000/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Dradis",
+			"type": 1
+		},
+		{
+			"categories": [
+				"Other",
+				"VPN",
+				"Tools"
+			],
+			"description": "This container contains OpenVPN and Deluge with a configuration where Deluge is running only when OpenVPN has an active tunnel. It bundles configuration files for many popular VPN providers to make the setup easier.",
+			"env": [
+				{
+					"default": "1001",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1001",
+					"label": "PGID",
+					"name": "PUID"
+				},
+				{
+					"default": "MULLVAD",
+					"description": "see https://github.com/sgtsquiggs/docker-deluge-openvpn",
+					"label": "OPENVPN_PROVIDER",
+					"name": "OPENVPN_PROVIDER"
+				},
+				{
+					"label": "OPENVPN_USERNAME",
+					"name": "OPENVPN_USERNAME"
+				},
+				{
+					"label": "OPENVPN_PASSWORD",
+					"name": "OPENVPN_PASSWORD"
+				}
+			],
+			"image": "sgtsquiggs/deluge-openvpn:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/deluge-openvpn.png",
+			"name": "deluge-openvpn",
+			"platform": "linux",
+			"ports": [
+				"8112:8112/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Deluge OpenVPN",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/etc/localtime",
+					"container": "/etc/localtime"
+				},
+				{
+					"bind": "/mnt/data/downloads",
+					"container": "/downloads"
+				},
+				{
+					"bind": "/mnt/data/appdata/delugeopenvpn/config",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
 				"Other",
 				"Tools"
 			],
@@ -273,6 +1052,173 @@
 			"volumes": [
 				{
 					"bind": "/mnt/data/appdata/embystat/config",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Other",
+				"Tools"
+			],
+			"description": "Web File Browser which can be used as a middleware or standalone app.",
+			"image": "80x86/filebrowser:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/filebrowser.png",
+			"name": "filebrowser",
+			"note": "The default user and password is admin/admin.",
+			"platform": "linux",
+			"ports": [
+				"8082:8082/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "FileBrowser",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/filebrowser/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/mnt/data/myfiles",
+					"container": "/myfiles"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Other"
+			],
+			"description": "A free, self-hostable rss aggregator.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "linuxserver/freshrss:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/freshrss-icon.png",
+			"name": "freshrss",
+			"platform": "linux",
+			"ports": [
+				"80/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "FreshRSS",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/freshrss/config",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Web",
+				"Books",
+				"Tools"
+			],
+			"description": "A WebApp Comic Reader for your favorite digital comics. Reach and read your comic library from any web connected device with a modern web browser",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "linuxserver/gazee:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/gazee-logo.png",
+			"name": "gazee",
+			"platform": "linux",
+			"restart_policy": "unless-stopped",
+			"title": "Gazee",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/gazee/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/mnt/data/comics",
+					"container": "/comics"
+				},
+				{
+					"bind": "/mnt/data/appdata/gazee/mylar",
+					"container": "/mylar"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Other",
+				"Tools",
+				"Finance"
+			],
+			"description": "Grocy is an ERP system for your kitchen! Cut down on food waste, and manage your chores with this brilliant utulity.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"label": "Timezone",
+					"name": "TZ"
+				}
+			],
+			"image": "linuxserver/grocy:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/grocy_logo.png",
+			"name": "grocy",
+			"platform": "linux",
+			"ports": [
+				"80/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Grocy",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/grocy/config",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Other",
+				"Tools"
+			],
+			"description": "A clientless remote desktop gateway.",
+			"image": "oznu/guacamole:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/guacamole.png",
+			"name": "guacamole",
+			"note": "The default login will be guacadmin/guacadmin. It is common practice to add a new admin user and remove the default user for Guacamole.",
+			"platform": "linux",
+			"ports": [
+				"8080:8080/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Guacamole",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/guacamole/config",
 					"container": "/config"
 				}
 			]
@@ -381,6 +1327,42 @@
 				{
 					"bind": "/mnt/data/appdata/homer/config",
 					"container": "/www/config.yml"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Video",
+				"Music",
+				"Other"
+			],
+			"description": "HTPC Manaager, a front end for many htpc related applications. Hellowlol version.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "linuxserver/htpcmanager:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/htpcmanager-icon.png",
+			"name": "htpcmanager",
+			"platform": "linux",
+			"ports": [
+				"8085:8085/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "HTPC Manager",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/htpcmanager/config",
+					"container": "/config"
 				}
 			]
 		},
@@ -710,6 +1692,49 @@
 				{
 					"bind": "/mnt/data/appdata/librespeed/config",
 					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Downloaders",
+				"Music"
+			],
+			"description": "Lidarr is a music collection manager for Usenet and BitTorrent users.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				}
+			],
+			"image": "linuxserver/lidarr:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/lidarr.png",
+			"name": "lidarr",
+			"platform": "linux",
+			"ports": [
+				"8686:8686/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "lidarr",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/lidarr/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/mnt/data/downloads",
+					"container": "/downloads"
+				},
+				{
+					"bind": "/mnt/data/music",
+					"container": "/music"
 				}
 			]
 		},
@@ -1523,981 +2548,6 @@
 				"Other",
 				"Tools"
 			],
-			"description": "Self-hosted snippet manager.",
-			"image": "snowmean/snibox-sqlite:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/snibox.png",
-			"name": "snibox",
-			"note": "Label-oriented interface with search. Supports various programming languages, markdown, plain text.",
-			"platform": "linux",
-			"ports": [
-				"3010:3000/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Snibox",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/snibox/config",
-					"container": "/app/db/database"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Wiki"
-			],
-			"description": "Bookstack is a free and open source Wiki designed for creating beautiful documentation. Feautring a simple, but powerful WYSIWYG editor it allows for teams to create detailed and useful documentation with ease.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				},
-				{
-					"label": "TZ",
-					"name": "TZ"
-				},
-				{
-					"label": "DATABASE_PASSWORD",
-					"name": "DATABASE_PASSWORD"
-				},
-				{
-					"label": "MYSQL_ROOT_PASSWORD",
-					"name": "MYSQL_ROOT_PASSWORD"
-				},
-				{
-					"label": "PORT",
-					"name": "PORT"
-				}
-			],
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/bookstack2.png",
-			"note": "Default login is admin@admin.com with a password of password. The database created is called bookstackapp and the database user is called bookstack",
-			"platform": "linux",
-			"repository": {
-				"stackfile": "Template/Stack/bookstack.yml",
-				"url": "https://github.com/SelfhostedPro/selfhosted_templates"
-			},
-			"title": "Bookstack",
-			"type": 3
-		},
-		{
-			"categories": [
-				"Other",
-				"Tools",
-				"Photo"
-			],
-			"description": "Chevereto is a powerful and fast image hosting script that allows you to create your very own full featured image hosting website in just minutes. Please note that this offers only the free Chevereto version.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				},
-				{
-					"label": "CHEVERETO_DB_HOST",
-					"name": "CHEVERETO_DB_HOST",
-					"set": ""
-				},
-				{
-					"label": "CHEVERETO_DB_USERNAME",
-					"name": "CHEVERETO_DB_USERNAME",
-					"set": ""
-				},
-				{
-					"label": "CHEVERETO_DB_PASSWORD",
-					"name": "CHEVERETO_DB_PASSWORD",
-					"set": ""
-				},
-				{
-					"label": "CHEVERETO_DB_NAME",
-					"name": "CHEVERETO_DB_NAME",
-					"set": ""
-				},
-				{
-					"label": "CHEVERETO_DB_PREFIX",
-					"name": "CHEVERETO_DB_PREFIX",
-					"set": ""
-				}
-			],
-			"image": "nmtan/chevereto:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/chevereto.png",
-			"name": "Chevereto",
-			"platform": "linux",
-			"ports": [
-				"80/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Chevereto",
-			"type": 1,
-			"volumes": [
-				{
-					"container": "/var/www/html/images"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Other",
-				"Tools"
-			],
-			"description": "Save recipes in seconds with plain text formatting and create beatiful recipe pages with automated ease.",
-			"image": "gregyankovoy/chowdown:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/chowdown.png",
-			"name": "Chowdown",
-			"platform": "linux",
-			"ports": [
-				"4000:4000/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Chowdown",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/chowdown/config",
-					"container": "/config"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Cloud",
-				"Books"
-			],
-			"description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/calibre-web:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/calibre-web-icon.png",
-			"name": "calibre-web",
-			"platform": "linux",
-			"ports": [
-				"8083:8083/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Calibre Web",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/books",
-					"container": "/books"
-				},
-				{
-					"bind": "/mnt/data/appdata/calibre-web/config",
-					"container": "/config"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Downloaders"
-			],
-			"description": "Cardigann, a server for adding extra indexers to Sonarr, SickRage and CouchPotato via Torznab and TorrentPotato proxies. Behind the scenes Cardigann logs in and runs searches and then transforms the results into a compatible format.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/cardigann:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/cardigann.png",
-			"name": "cardigann",
-			"platform": "linux",
-			"ports": [
-				"5060:5060/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Cardigann",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/cardigann/config",
-					"container": "/config"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Other",
-				"Tools"
-			],
-			"description": "Code-server is VS Code running on a remote server, accessible through the browser.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "GUID"
-				},
-				{
-					"label": "TZ",
-					"name": "TZ"
-				},
-				{
-					"label": "PASSWORD",
-					"name": "PASSWORD"
-				},
-				{
-					"label": "SUDO_PASSWORD",
-					"name": "SUDO_PASSWORD"
-				},
-				{
-					"default": "example.my.domain",
-					"label": "PROXY_DOMAIN",
-					"name": "PROXY_DOMAIN"
-				}
-			],
-			"image": "linuxserver/code-server:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/code-server.png",
-			"name": "code-server",
-			"platform": "linux",
-			"ports": [
-				"8443:8443/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Code Server",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/code-server/config",
-					"container": "/config"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Productivity"
-			],
-			"description": "Codiad is a web-based IDE framework with a small footprint and minimal requirements.\n  ",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/codiad:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/codiad-icon.png",
-			"name": "codiad",
-			"platform": "linux",
-			"ports": [
-				"80/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Codiad",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/codiad/config",
-					"container": "/config"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Cloud",
-				"Books"
-			],
-			"description": "COPS links to your Calibre library database and allows downloading and emailing of books directly from a web browser and provides a OPDS feed to connect to your devices.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/cops:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/cops-icon.png",
-			"name": "cops",
-			"platform": "linux",
-			"ports": [
-				"80/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "COPS",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/books",
-					"container": "/books"
-				},
-				{
-					"bind": "/mnt/data/appdata/cops/config",
-					"container": "/config"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Downloaders",
-				"Video"
-			],
-			"description": "CouchPotato (CP) is an automatic NZB and torrent downloader. You can keep a \"movies I want\"-list and it will search for NZBs/torrents of these movies every X hours. Once a movie is found, it will send it to SABnzbd or download the torrent to a specified directory.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/couchpotato:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/couchpotato-icon.png",
-			"name": "couchpotato",
-			"platform": "linux",
-			"ports": [
-				"5050:5050/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "CouchPotato",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/couchpotato/config",
-					"container": "/config"
-				},
-				{
-					"bind": "/mnt/data/downloads",
-					"container": "/downloads"
-				},
-				{
-					"bind": "/mnt/data/movies",
-					"container": "/movies"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Music"
-			],
-			"description": "DAAP (iTunes) media server with support for AirPlay devices, Apple Remote (and compatibles), MPD and internet radio.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/daapd:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/daapd-icon.png",
-			"name": "daapd",
-			"platform": "linux",
-			"restart_policy": "unless-stopped",
-			"title": "Daapd",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/daapd/config",
-					"container": "/config"
-				},
-				{
-					"bind": "/mnt/data/music",
-					"container": "/music"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Other",
-				"Tools"
-			],
-			"description": "Another application bookmark dashboard, with fun features.",
-			"image": "rmountjoy/dashmachine:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/dashmachine_logo.png",
-			"name": "dashmachine",
-			"platform": "linux",
-			"ports": [
-				"5000:5000/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "DashMachine",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/dashmachine/config",
-					"container": "/dashmachine/dashmachine/user_data"
-				}
-			]
-		},
-		{
-			"categories": [
-				"FTP",
-				"Other",
-				"Tools"
-			],
-			"description": "davos is an FTP automation tool that periodically scans given host locations for new files. It can be configured for various purposes, including listening for specific files to appear in the host location, ready for it to download and then move, if required. It also supports completion notifications as well as downstream API calls, to further the workflow.\r\n\r\n/config : AppData Location\r\n/download : File Download Location",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/davos:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/davos.png",
-			"name": "davos",
-			"platform": "linux",
-			"ports": [
-				"8080/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Davos",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/davos/config",
-					"container": "/config"
-				},
-				{
-					"bind": "/mnt/data/downloads",
-					"container": "/downloads"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Other",
-				"Music"
-			],
-			"description": "Deemix is a deezer downloader built from the ashes of Deezloader Remix.",
-			"image": "registry.gitlab.com/bockiii/deemix-docker",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/deemix.png",
-			"name": "deemix",
-			"note": "Deemix may take a few minutes to install. Be sure to check the logs for details. Refer to \u003ca href='https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken'\u003ethis page\u003c/a\u003e for userToken details.",
-			"platform": "linux",
-			"ports": [
-				"9666:9666/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "DeeMix",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/deemix/config",
-					"container": "/config"
-				},
-				{
-					"bind": "/mnt/data/downloads",
-					"container": "/downloads"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Downloaders"
-			],
-			"description": "Deluge is a lightweight, Free Software, cross-platform BitTorrent client providing: Full Encryption, WebUI, Plugin System, Much more...",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				},
-				{
-					"label": "UMASK_SET",
-					"name": "UMASK_SET",
-					"set": "000"
-				}
-			],
-			"image": "linuxserver/deluge:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/deluge-icon.png",
-			"namme": "deluge",
-			"platform": "linux",
-			"restart_policy": "unless-stopped",
-			"title": "Deluge",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/deluge/config",
-					"container": "/config"
-				},
-				{
-					"bind": "/mnt/data/downloads",
-					"container": "/downloads"
-				}
-			]
-		},
-		{
-			"categories": [
-				"HomeAutomation",
-				"Management"
-			],
-			"description": "Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/domoticz:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/domoticz.png",
-			"name": "domoticz",
-			"platform": "linux",
-			"ports": [
-				"1443:1443/tcp",
-				"6144:6144/tcp",
-				"8080:8080/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Domoticz",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/domoticz/config",
-					"container": "/config"
-				}
-			]
-		},
-		{
-			"categories": [
-				"DNS",
-				"Tools"
-			],
-			"description": "Duck DNS is a free service which will point a DNS (sub domains of duckdns.org) to an IP of your choice. The service is completely free, and doesn't require reactivation or forum posts to maintain its existence.\r\n\r\nFirst, go to duckdns site, register your subdomain and retrieve your token\r\nThen run the docker create command above with your subdomain(s) and token\r\nIt will update your IP with the DuckDNS service every 5 minutes\r\n\r\n",
-			"env": [
-				{
-					"label": "SUBDOMAINS",
-					"name": "SUBDOMAINS",
-					"set": ""
-				},
-				{
-					"label": "TOKEN",
-					"name": "TOKEN",
-					"set": ""
-				},
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/duckdns:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/duckdns.png",
-			"name": "duckdns",
-			"platform": "linux",
-			"restart_policy": "unless-stopped",
-			"title": "Duck DNS",
-			"type": 1
-		},
-		{
-			"categories": [
-				"Backup",
-				"Cloud",
-				"Other",
-				"Productivity",
-				"Tools"
-			],
-			"description": "Free backup software to store encrypted backups online, Duplicati works with standard protocols like FTP, SSH, WebDAV as well as popular services like Microsoft OneDrive, Amazon Cloud Drive and S3, Google Drive, box.com, Mega, hubiC and many others.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/duplicati:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/duplicati-icon.png",
-			"name": "duplicati",
-			"platform": "linux",
-			"ports": [
-				"8200:8200/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Duplicati",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/duplicati/config",
-					"container": "/config"
-				},
-				{
-					"bind": "/mnt/data/appdata/duplicati/tmp",
-					"container": "/tmp"
-				},
-				{
-					"bind": "/mnt/data/appdata/duplicati/backups",
-					"container": "/backups"
-				},
-				{
-					"bind": "/mnt/data/appdata/duplicati/source",
-					"container": "/source"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Video",
-				"Music",
-				"Photos"
-			],
-			"description": "Emby organizes video, music, live TV, and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone emby Media Server.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				},
-				{
-					"label": "TZ",
-					"name": "TZ"
-				}
-			],
-			"image": "linuxserver/emby:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/emby.png",
-			"name": "emby",
-			"platform": "linux",
-			"ports": [
-				"8096:8096/tcp",
-				"8920:8920/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Emby",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/emby/config",
-					"container": "/config"
-				},
-				{
-					"bind": "/mnt/data/tv",
-					"container": "/data/tvshows"
-				},
-				{
-					"bind": "/mnt/data/movies",
-					"container": "/data/movies"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Other",
-				"Tools"
-			],
-			"description": "Web File Browser which can be used as a middleware or standalone app.",
-			"image": "80x86/filebrowser:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/filebrowser.png",
-			"name": "filebrowser",
-			"note": "The default user and password is admin/admin.",
-			"platform": "linux",
-			"ports": [
-				"8082:8082/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "FileBrowser",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/filebrowser/config",
-					"container": "/config"
-				},
-				{
-					"bind": "/mnt/data/myfiles",
-					"container": "/myfiles"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Other"
-			],
-			"description": "A free, self-hostable rss aggregator.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/freshrss:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/freshrss-icon.png",
-			"name": "freshrss",
-			"platform": "linux",
-			"ports": [
-				"80/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "FreshRSS",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/freshrss/config",
-					"container": "/config"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Web",
-				"Books",
-				"Tools"
-			],
-			"description": "A WebApp Comic Reader for your favorite digital comics. Reach and read your comic library from any web connected device with a modern web browser",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/gazee:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/gazee-logo.png",
-			"name": "gazee",
-			"platform": "linux",
-			"restart_policy": "unless-stopped",
-			"title": "Gazee",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/gazee/config",
-					"container": "/config"
-				},
-				{
-					"bind": "/mnt/data/comics",
-					"container": "/comics"
-				},
-				{
-					"bind": "/mnt/data/appdata/gazee/mylar",
-					"container": "/mylar"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Other",
-				"Tools",
-				"Finance"
-			],
-			"description": "Grocy is an ERP system for your kitchen! Cut down on food waste, and manage your chores with this brilliant utulity.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				},
-				{
-					"label": "Timezone",
-					"name": "TZ"
-				}
-			],
-			"image": "linuxserver/grocy:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/grocy_logo.png",
-			"name": "grocy",
-			"platform": "linux",
-			"ports": [
-				"80/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Grocy",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/grocy/config",
-					"container": "/config"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Other",
-				"Tools"
-			],
-			"description": "A clientless remote desktop gateway.",
-			"image": "oznu/guacamole:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/guacamole.png",
-			"name": "guacamole",
-			"note": "The default login will be guacadmin/guacadmin. It is common practice to add a new admin user and remove the default user for Guacamole.",
-			"platform": "linux",
-			"ports": [
-				"8080:8080/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Guacamole",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/guacamole/config",
-					"container": "/config"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Video",
-				"Music",
-				"Other"
-			],
-			"description": "HTPC Manaager, a front end for many htpc related applications. Hellowlol version.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/htpcmanager:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/htpcmanager-icon.png",
-			"name": "htpcmanager",
-			"platform": "linux",
-			"ports": [
-				"8085:8085/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "HTPC Manager",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/htpcmanager/config",
-					"container": "/config"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Downloaders",
-				"Music"
-			],
-			"description": "Lidarr is a music collection manager for Usenet and BitTorrent users.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/lidarr:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/lidarr.png",
-			"name": "lidarr",
-			"platform": "linux",
-			"ports": [
-				"8686:8686/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "lidarr",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/lidarr/config",
-					"container": "/config"
-				},
-				{
-					"bind": "/mnt/data/downloads",
-					"container": "/downloads"
-				},
-				{
-					"bind": "/mnt/data/music",
-					"container": "/music"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Other",
-				"Tools"
-			],
 			"description": "A Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole.",
 			"image": "pihole/pihole:latest",
 			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/pihole.png",
@@ -3208,6 +3258,30 @@
 		},
 		{
 			"categories": [
+				"Other",
+				"Tools"
+			],
+			"description": "Self-hosted snippet manager.",
+			"image": "snowmean/snibox-sqlite:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/snibox.png",
+			"name": "snibox",
+			"note": "Label-oriented interface with search. Supports various programming languages, markdown, plain text.",
+			"platform": "linux",
+			"ports": [
+				"3010:3000/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Snibox",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/snibox/config",
+					"container": "/app/db/database"
+				}
+			]
+		},
+		{
+			"categories": [
 				"Downloaders",
 				"Video"
 			],
@@ -3299,7 +3373,7 @@
 					"container": "/downloads"
 				}
 			]
-		},		
+		},			
 		{
 			"categories": [
 				"Backup",
@@ -3711,6 +3785,62 @@
 		},
 		{
 			"categories": [
+				"CCTV"
+			],
+			"description": "UniFi Video is a powerful and flexible, integrated IP video management surveillance system designed to work with Ubiquiti’s UniFi Video Camera product line. UniFi Video has an intuitive, configurable, and feature‑packed user interface with advanced features such as motion detection, auto‑discovery, user‑level security, storage management, reporting, and mobile device support.",
+			"env": [
+				{
+					"default": "99",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "002",
+					"label": "UMASK",
+					"name": "UMASK"
+				},
+				{
+					"label": "CONTEXT_PATH",
+					"name": "CONTEXT_PATH",
+					"set": "UniFi Video"
+				}
+			],
+			"image": "pducharme/unifi-video-controller:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/unifivideo.png",
+			"name": "UniFi Video",
+			"platform": "linux",
+			"ports": [
+				"1935:1935/tcp",
+				"7444:7444/tcp",
+				"7447:7447/tcp",
+				"6666:6666/tcp",
+				"7442:7442/tcp",
+				"7080:7080/tcp",
+				"7443:7443/tcp",
+				"7445:7445/tcp",
+				"7446:7446/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "UniFi Video",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/recordings",
+					"container": "/recordings"
+				},
+				{
+					"bind": "/mnt/data/appdata/unifivideo/config",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
 				"Other",
 				"Tools",
 				"Maintenance"
@@ -3819,6 +3949,33 @@
 		{
 			"categories": [
 				"Other",
+				"Tools"
+			],
+			"description": "A web interface for managing docker containers with an emphasis on templating to provide 1 click deployments. Think of it like a decentralized app store for servers that anyone can make packages for.",
+			"image": "selfhostedpro/yacht:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/yacht.png",
+			"name": "yacht",
+			"platform": "linux",
+			"ports": [
+				"8001:8000/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Yacht",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/mnt/data/appdata/yacht/config",
+					"container": "/config"
+				},
+				{
+					"bind": "/var/run/docker.sock",
+					"container": "/var/run/docker.sock"
+				}
+			]
+		},
+		{
+			"categories": [
+				"Other",
 				"Downloaders"
 			],
 			"description": "YoutubeDL-Material is a Material Design frontend for youtube-dl. It's coded using Angular 9 for the frontend, and Node.js on the backend.",
@@ -3857,89 +4014,6 @@
 		},
 		{
 			"categories": [
-				"CCTV"
-			],
-			"description": "UniFi Video is a powerful and flexible, integrated IP video management surveillance system designed to work with Ubiquiti’s UniFi Video Camera product line. UniFi Video has an intuitive, configurable, and feature‑packed user interface with advanced features such as motion detection, auto‑discovery, user‑level security, storage management, reporting, and mobile device support.",
-			"env": [
-				{
-					"default": "99",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				},
-				{
-					"default": "002",
-					"label": "UMASK",
-					"name": "UMASK"
-				},
-				{
-					"label": "CONTEXT_PATH",
-					"name": "CONTEXT_PATH",
-					"set": "UniFi Video"
-				}
-			],
-			"image": "pducharme/unifi-video-controller:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/unifivideo.png",
-			"name": "UniFi Video",
-			"platform": "linux",
-			"ports": [
-				"1935:1935/tcp",
-				"7444:7444/tcp",
-				"7447:7447/tcp",
-				"6666:6666/tcp",
-				"7442:7442/tcp",
-				"7080:7080/tcp",
-				"7443:7443/tcp",
-				"7445:7445/tcp",
-				"7446:7446/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "UniFi Video",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/recordings",
-					"container": "/recordings"
-				},
-				{
-					"bind": "/mnt/data/appdata/unifivideo/config",
-					"container": "/config"
-				}
-			]
-    },
-		{
-			"categories": [
-				"Other",
-				"Tools"
-			],
-			"description": "A web interface for managing docker containers with an emphasis on templating to provide 1 click deployments. Think of it like a decentralized app store for servers that anyone can make packages for.",
-			"image": "selfhostedpro/yacht:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/yacht.png",
-			"name": "yacht",
-			"platform": "linux",
-			"ports": [
-				"8001:8000/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Yacht",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/mnt/data/appdata/yacht/config",
-					"container": "/config"
-				},
-				{
-					"bind": "/var/run/docker.sock",
-					"container": "/var/run/docker.sock"
-				}
-			]
-		},
-		{
-			"categories": [
 				"Messenger"
 			],
 			"description": "ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels. Multiple clients from different locations can connect to a single ZNC account simultaneously and therefore appear under the same nickname on IRC.",
@@ -3971,80 +4045,6 @@
 					"container": "/config"
 				}
 			]
-		},
-		{
-			"categories": [
-				"Other",
-				"VPN",
-				"Tools"
-			],
-			"description": "This container contains OpenVPN and Deluge with a configuration where Deluge is running only when OpenVPN has an active tunnel. It bundles configuration files for many popular VPN providers to make the setup easier.",
-			"env": [
-				{
-					"default": "1001",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1001",
-					"label": "PGID",
-					"name": "PUID"
-				},
-				{
-					"default": "MULLVAD",
-					"description": "see https://github.com/sgtsquiggs/docker-deluge-openvpn",
-					"label": "OPENVPN_PROVIDER",
-					"name": "OPENVPN_PROVIDER"
-				},
-				{
-					"label": "OPENVPN_USERNAME",
-					"name": "OPENVPN_USERNAME"
-				},
-				{
-					"label": "OPENVPN_PASSWORD",
-					"name": "OPENVPN_PASSWORD"
-				}
-			],
-			"image": "sgtsquiggs/deluge-openvpn:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/deluge-openvpn.png",
-			"name": "deluge-openvpn",
-			"platform": "linux",
-			"ports": [
-				"8112:8112/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Deluge openvpn",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/etc/localtime",
-					"container": "/etc/localtime"
-				},
-				{
-					"bind": "/mnt/data/downloads",
-					"container": "/downloads"
-				},
-				{
-					"bind": "/mnt/data/appdata/delugeopenvpn/config",
-					"container": "/config"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Security"
-			],
-			"description": "Dradis Framework: Collaboration and reporting for IT Security teams http://dradisframework.org",
-			"image": "raesene/dradis:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/dradis-logo.png",
-			"name": "dradis",
-			"platform": "linux",
-			"ports": [
-				"3000:3000/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Dradis",
-			"type": 1
 		}
 	]
 }
