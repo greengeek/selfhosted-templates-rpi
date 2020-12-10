@@ -788,6 +788,64 @@
 		},
 		{
 			"categories": [
+				"Other",
+				"VPN",
+				"Tools"
+			],
+			"description": "This container contains OpenVPN and Deluge with a configuration where Deluge is running only when OpenVPN has an active tunnel. It bundles configuration files for many popular VPN providers to make the setup easier.",
+			"env": [
+				{
+					"default": "1001",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1001",
+					"label": "PGID",
+					"name": "PUID"
+				},
+				{
+					"default": "MULLVAD",
+					"description": "see https://github.com/sgtsquiggs/docker-deluge-openvpn",
+					"label": "OPENVPN_PROVIDER",
+					"name": "OPENVPN_PROVIDER"
+				},
+				{
+					"label": "OPENVPN_USERNAME",
+					"name": "OPENVPN_USERNAME"
+				},
+				{
+					"label": "OPENVPN_PASSWORD",
+					"name": "OPENVPN_PASSWORD"
+				}
+			],
+			"image": "sgtsquiggs/deluge-openvpn:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/deluge-openvpn.png",
+			"name": "deluge-openvpn",
+			"platform": "linux",
+			"ports": [
+				"8112:8112/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Deluge OpenVPN",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/etc/localtime",
+					"container": "/etc/localtime"
+				},
+				{
+					"bind": "/mnt/data/downloads",
+					"container": "/downloads"
+				},
+				{
+					"bind": "/mnt/data/appdata/delugeopenvpn/config",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
 				"HomeAutomation",
 				"Management"
 			],
@@ -822,6 +880,22 @@
 					"container": "/config"
 				}
 			]
+		},
+		{
+			"categories": [
+				"Security"
+			],
+			"description": "Dradis Framework: Collaboration and reporting for IT Security teams http://dradisframework.org",
+			"image": "raesene/dradis:latest",
+			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/dradis-logo.png",
+			"name": "dradis",
+			"platform": "linux",
+			"ports": [
+				"3000:3000/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Dradis",
+			"type": 1
 		},
 		{
 			"categories": [
@@ -955,80 +1029,6 @@
 				{
 					"bind": "/mnt/data/movies",
 					"container": "/data/movies"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Security"
-			],
-			"description": "Dradis Framework: Collaboration and reporting for IT Security teams http://dradisframework.org",
-			"image": "raesene/dradis:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/dradis-logo.png",
-			"name": "dradis",
-			"platform": "linux",
-			"ports": [
-				"3000:3000/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Dradis",
-			"type": 1
-		},
-		{
-			"categories": [
-				"Other",
-				"VPN",
-				"Tools"
-			],
-			"description": "This container contains OpenVPN and Deluge with a configuration where Deluge is running only when OpenVPN has an active tunnel. It bundles configuration files for many popular VPN providers to make the setup easier.",
-			"env": [
-				{
-					"default": "1001",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1001",
-					"label": "PGID",
-					"name": "PUID"
-				},
-				{
-					"default": "MULLVAD",
-					"description": "see https://github.com/sgtsquiggs/docker-deluge-openvpn",
-					"label": "OPENVPN_PROVIDER",
-					"name": "OPENVPN_PROVIDER"
-				},
-				{
-					"label": "OPENVPN_USERNAME",
-					"name": "OPENVPN_USERNAME"
-				},
-				{
-					"label": "OPENVPN_PASSWORD",
-					"name": "OPENVPN_PASSWORD"
-				}
-			],
-			"image": "sgtsquiggs/deluge-openvpn:latest",
-			"logo": "https://raw.githubusercontent.com/greengeek/selfhosted-templates-rpi/main/images/deluge-openvpn.png",
-			"name": "deluge-openvpn",
-			"platform": "linux",
-			"ports": [
-				"8112:8112/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Deluge OpenVPN",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/etc/localtime",
-					"container": "/etc/localtime"
-				},
-				{
-					"bind": "/mnt/data/downloads",
-					"container": "/downloads"
-				},
-				{
-					"bind": "/mnt/data/appdata/delugeopenvpn/config",
-					"container": "/config"
 				}
 			]
 		},
