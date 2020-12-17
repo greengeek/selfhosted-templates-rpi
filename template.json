@@ -3350,7 +3350,7 @@
 			"name": "sonarr3",
 			"platform": "linux",
 			"ports": [
-				"8989:8983/tcp"
+				"8989:8989/tcp"
 			],
 			"restart_policy": "unless-stopped",
 			"title": "Sonarr v3",
